@@ -1,5 +1,6 @@
 package dev.electronya.confignya;
 
+import android.net.nsd.NsdServiceInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -8,6 +9,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
+
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -15,6 +18,7 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import dev.electronya.confignya.services.ServiceManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        // Discover services
+        ServiceManager serviceManager = new ServiceManager(this);
+        serviceManager.init();
+        serviceManager.discoverServices(ServiceManager.PIRBLASTER_SVC_TYPE);
+        ArrayList<NsdServiceInfo> services = serviceManager.getServices();
     }
 
     @Override
