@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="broker_card_title">Broker</string>
+    <string name="broker_state_content_desc">Broker connection state</string>
+    <string name="broker_info_hostname_label">Hostname:</string>
+    <string name="broker_info_default_hostname">broker.local</string>
+    <string name="broker_info_port_label">Port:</string>
+    <string name="broker_info_default_port">1883</string>
+    <string name="broker_info_security_radio_content_desc">Security enabled</string>
+    <string name="broker_info_security_label">TSL/SSL</string>
+
+    <string name="services_card_title">Services</string>
+</resources>

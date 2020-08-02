@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/broker_info_state"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:tint="@color/colorError"
+        android:src="@drawable/ic_baseline_offline_24"
+        android:contentDescription="@string/broker_state_content_desc"/>
+
+    <TextView
+        android:id="@+id/broker_info_hostname_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/broker_info_state"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/broker_info_hostname_label" />
+
+    <TextView
+        android:id="@+id/broker_info_hostname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/broker_info_hostname_label"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/broker_info_default_hostname" />
+
+    <TextView
+        android:id="@+id/broker_info_port_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/broker_info_hostname"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/broker_info_port_label" />
+
+    <TextView
+        android:id="@+id/broker_info_port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/broker_info_port_label"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/broker_info_default_port" />
+
+    <ImageView
+        android:id="@+id/broker_info_security_radio"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_below="@id/broker_info_hostname_label"
+        android:layout_toEndOf="@id/broker_info_state"
+        android:tint="@color/colorPrimary"
+        android:contentDescription="@string/broker_info_security_radio_content_desc"
+        android:src="@drawable/ic_baseline_radio_button_unchecked_24" />
+
+    <TextView
+        android:id="@+id/broker_info_security_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_below="@id/broker_info_hostname_label"
+        android:layout_toEndOf="@id/broker_info_security_radio"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/broker_info_security_label" />
+</RelativeLayout>
