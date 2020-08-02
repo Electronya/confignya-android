@@ -2,7 +2,7 @@
 <resources>
     <string name="broker_card_title">Broker</string>
     <string name="broker_state_content_desc">Broker connection state</string>
-    <string name="broker_info_hostname_label">Hostname:</string>
+    <string name="broker_info_hostname_label">Host:</string>
     <string name="broker_info_default_hostname">broker.local</string>
     <string name="broker_info_port_label">Port:</string>
     <string name="broker_info_default_port">1883</string>
@@ -10,4 +10,10 @@
     <string name="broker_info_security_label">TSL/SSL</string>
 
     <string name="services_card_title">Services</string>
+    <string name="services_state_content_desc">Service connection state</string>
+    <string name="services_info_default_name">PirBlaster</string>
+    <string name="services_info_host_label">Host:</string>
+    <string name="services_info_default_host">pirblaster.local</string>
+    <string name="services_info_port_label">Port:</string>
+    <string name="services_info_default_port">5000</string>
 </resources>

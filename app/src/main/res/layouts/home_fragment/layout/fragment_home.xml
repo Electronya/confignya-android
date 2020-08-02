@@ -18,5 +18,9 @@
         <include
             layout="@layout/broker_card"
             android:id="@+id/broker_home_card" />
+
+        <include
+            layout="@layout/services_card"
+            android:id="@+id/services_home_card" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
